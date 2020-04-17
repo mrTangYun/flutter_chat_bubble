@@ -1,8 +1,7 @@
 name: chat_bubble
 description: A new Flutter package project.
 version: 0.0.1
-author:
-homepage:
+homepage: 'https://github.com/mrTangYun/flutter_chat_bubble'
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
