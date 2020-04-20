@@ -1,4 +1,5 @@
 library chat_bubble;
+
 import 'dart:math';
 import 'package:flutter/material.dart';
 
@@ -21,27 +22,20 @@ abstract class Bubble extends CustomClipper<Path> {
   /// 三角形圆角的高度(宽度)
   double _triangleRadiusHeight;
 
-  Bubble({
-    this.radius,
-    this.triangleTop,
-    this.triangleLength,
-    this.triangleRadius
-  })  : this._triangleHalfHeight = sqrt(2 * pow(triangleLength, 2)) / 2,
+  Bubble(
+      {this.radius, this.triangleTop, this.triangleLength, this.triangleRadius})
+      : this._triangleHalfHeight = sqrt(2 * pow(triangleLength, 2)) / 2,
         this._triangleRadiusHeight = cos(pi * 45 / 180) * triangleRadius;
 }
 
 class BubbleClipperRight extends Bubble {
-  BubbleClipperRight({
-    radius,
-    triangleTop,
-    triangleLength,
-    triangleRadius
-  }): super(
-    radius: radius,
-    triangleTop: triangleTop,
-    triangleLength: triangleLength,
-    triangleRadius: triangleRadius,
-  );
+  BubbleClipperRight({radius, triangleTop, triangleLength, triangleRadius})
+      : super(
+          radius: radius,
+          triangleTop: triangleTop,
+          triangleLength: triangleLength,
+          triangleRadius: triangleRadius,
+        );
   @override
   Path getClip(Size size) {
     final Path path = Path();
@@ -103,17 +97,13 @@ class BubbleClipperRight extends Bubble {
 }
 
 class BubbleClipperLeft extends Bubble {
-  BubbleClipperLeft({
-    radius,
-    triangleTop,
-    triangleLength,
-    triangleRadius
-  }): super(
-    radius: radius,
-    triangleTop: triangleTop,
-    triangleLength: triangleLength,
-    triangleRadius: triangleRadius,
-  );
+  BubbleClipperLeft({radius, triangleTop, triangleLength, triangleRadius})
+      : super(
+          radius: radius,
+          triangleTop: triangleTop,
+          triangleLength: triangleLength,
+          triangleRadius: triangleRadius,
+        );
   @override
   Path getClip(Size size) {
     final Path path = Path();
@@ -148,8 +138,7 @@ class BubbleClipperLeft extends Bubble {
         this.triangleTop +
             this._triangleHalfHeight +
             this._triangleRadiusHeight);
-    final Offset _pct =
-        Offset(0, this.triangleTop + this._triangleHalfHeight);
+    final Offset _pct = Offset(0, this.triangleTop + this._triangleHalfHeight);
     final Offset _pet = Offset(
         0 + this._triangleRadiusHeight,
         this.triangleTop +
