@@ -1,6 +1,8 @@
 # chat_bubble
 
-A new Flutter package project.
+A chat bubble widget, similar to WeChat, You can customize the orientation and the size of the rounded corners, as well as the rounded corners and position of the triangle..
+
+类似微信一样的聊天气泡，可以用作文字、图片等等
 
 ## Usage
 ```
