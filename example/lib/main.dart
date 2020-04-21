@@ -49,168 +49,173 @@ class MyHomePage extends StatelessWidget {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: SingleChildScrollView(
-                  child: Column(
-            // Column is also a layout widget. It takes a list of children and
-            // arranges them vertically. By default, it sizes itself to fit its
-            // children horizontally, and tries to be as tall as its parent.
-            //
-            // Invoke "debug painting" (press "p" in the console, choose the
-            // "Toggle Debug Paint" action from the Flutter Inspector in Android
-            // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-            // to see the wireframe for each widget.
-            //
-            // Column has various properties to control how it sizes itself and
-            // how it positions its children. Here we use mainAxisAlignment to
-            // center the children vertically; the main axis here is the vertical
-            // axis because Columns are vertical (the cross axis would be
-            // horizontal).
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              ChatBubble(
-                direction: ChatBubbleNipDirection.LEFT,
-                child: Container(
-                  height: 45,
-                  color: Color(0xffdddddd),
-                  child: Center(
-                    child: Text('收到文本'),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              // Column is also a layout widget. It takes a list of children and
+              // arranges them vertically. By default, it sizes itself to fit its
+              // children horizontally, and tries to be as tall as its parent.
+              //
+              // Invoke "debug painting" (press "p" in the console, choose the
+              // "Toggle Debug Paint" action from the Flutter Inspector in Android
+              // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+              // to see the wireframe for each widget.
+              //
+              // Column has various properties to control how it sizes itself and
+              // how it positions its children. Here we use mainAxisAlignment to
+              // center the children vertically; the main axis here is the vertical
+              // axis because Columns are vertical (the cross axis would be
+              // horizontal).
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ChatBubble(
+                  direction: ChatBubbleNipDirection.LEFT,
+                  child: Container(
+                    height: 45,
+                    color: Color(0xffdddddd),
+                    child: Center(
+                      child: Text('收到文本'),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              ChatBubble(
-                direction: ChatBubbleNipDirection.RIGHT,
-                child: Container(
-                  width: 230,
-                  height: 45,
-                  color: Color(0xffa5ed7e),
-                  child: Center(
-                    child: Text('发送文本'),
+                SizedBox(
+                  height: 30,
+                ),
+                ChatBubble(
+                  direction: ChatBubbleNipDirection.RIGHT,
+                  child: Container(
+                    width: 230,
+                    height: 45,
+                    color: Color(0xffa5ed7e),
+                    child: Center(
+                      child: Text('发送文本'),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              ChatBubble(
-                shadows: <Shadow>[
-                  Shadow(
-                    color: Colors.red,
-                    offset: Offset(0, 0),
-                    blurRadius: 5,
-                  ),
-                ],
-                direction: ChatBubbleNipDirection.RIGHT,
-                child: Container(
-                  width: 230,
-                  height: 45,
-                  color: Color(0xffa5ed7e),
-                  child: Center(
-                    child: Text('单个阴影'),
+                SizedBox(
+                  height: 30,
+                ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: ChatBubble(
+                    shadows: <Shadow>[
+                      Shadow(
+                        color: Colors.red,
+                        offset: Offset(0, 0),
+                        blurRadius: 5,
+                      ),
+                    ],
+                    direction: ChatBubbleNipDirection.RIGHT,
+                    child: Container(
+                      width: 230,
+                      height: 45,
+                      color: Color(0xffa5ed7e),
+                      child: Center(
+                        child: Text('单个阴影'),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              
-              ChatBubble(
-                shadows: <Shadow>[
-                  Shadow(
-                    color: Colors.red,
-                    offset: Offset(-5, -5),
-                    blurRadius: 5,
-                  ),
-                  Shadow(
-                    color: Colors.blue,
-                    offset: Offset(5, 5),
-                    blurRadius: 5,
-                  )
-                ],
-                direction: ChatBubbleNipDirection.RIGHT,
-                child: Container(
-                  width: 230,
-                  height: 45,
-                  color: Color(0xffa5ed7e),
-                  child: Center(
-                    child: Text('多个阴影'),
+                SizedBox(
+                  height: 30,
+                ),
+                ChatBubble(
+                  shadows: <Shadow>[
+                    Shadow(
+                      color: Colors.red,
+                      offset: Offset(-5, -5),
+                      blurRadius: 5,
+                    ),
+                    Shadow(
+                      color: Colors.blue,
+                      offset: Offset(5, 5),
+                      blurRadius: 5,
+                    )
+                  ],
+                  direction: ChatBubbleNipDirection.RIGHT,
+                  child: Container(
+                    width: 230,
+                    height: 45,
+                    color: Color(0xffa5ed7e),
+                    child: Center(
+                      child: Text('多个阴影'),
+                    ),
                   ),
                 ),
-              ),SizedBox(
-                height: 30,
-              ),
-              ChatBubble(
-                shadows: <Shadow>[
-                  Shadow(
-                    color: Colors.red,
-                    offset: Offset(0, 0),
-                    blurRadius: 5,
-                  )
-                ],
-                direction: reverse
-                    ? ChatBubbleNipDirection.RIGHT
-                    : ChatBubbleNipDirection.LEFT,
-                child: Container(
-                  width: 300,
-                  color: Colors.grey.withOpacity(0.8),
-                  child: Image.network(
-                    'https://pics7.baidu.com/feed/b21c8701a18b87d6627be358ca93ae3e1e30fdda.jpeg?token=a6434449ed9bc79aa3c414a52e4a4e1b',
-                  ),
+                SizedBox(
+                  height: 30,
                 ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              ChatBubble(
-                nipLength: 30.0,
-                nipRadius: 10.0,
-                nipTop: 80.0,
-                shadows: <Shadow>[
-                  Shadow(
-                    color: Colors.red,
-                    offset: Offset(0, 0),
-                    blurRadius: 5,
-                  )
-                ],
-                direction: reverse
-                    ? ChatBubbleNipDirection.RIGHT
-                    : ChatBubbleNipDirection.LEFT,
-                child: Container(
-                  width: 300,
-                  color: Colors.grey.withOpacity(0.8),
-                  child: Image.network(
-                    'https://pics7.baidu.com/feed/b21c8701a18b87d6627be358ca93ae3e1e30fdda.jpeg?token=a6434449ed9bc79aa3c414a52e4a4e1b',
-                  ),
-                ),
-              ),
-              
-              SizedBox(
-                height: 30,
-              ),
-              ChatBubble(
-                shadows: <Shadow>[
-                  Shadow(
+                ChatBubble(
+                  shadows: <Shadow>[
+                    Shadow(
+                      color: Colors.red,
+                      offset: Offset(0, 0),
+                      blurRadius: 5,
+                    )
+                  ],
+                  direction: reverse
+                      ? ChatBubbleNipDirection.RIGHT
+                      : ChatBubbleNipDirection.LEFT,
+                  child: Container(
+                    width: 300,
                     color: Colors.grey.withOpacity(0.8),
-                    offset: Offset(-1.0, -1.0),
-                    blurRadius: 0.1,
-                  ),
-                  Shadow(
-                    color: Colors.grey.withOpacity(0.8),
-                    offset: Offset(1.0, 1.0),
-                    blurRadius: 0.4,
-                  )
-                ],
-                direction: ChatBubbleNipDirection.LEFT,
-                child: Container(
-                  width: 200,
-                  color: Colors.grey.withOpacity(0.8),
-                  child: Image.network(
-                    'https://pics7.baidu.com/feed/b21c8701a18b87d6627be358ca93ae3e1e30fdda.jpeg?token=a6434449ed9bc79aa3c414a52e4a4e1b',
+                    child: Image.network(
+                      'https://pics7.baidu.com/feed/b21c8701a18b87d6627be358ca93ae3e1e30fdda.jpeg?token=a6434449ed9bc79aa3c414a52e4a4e1b',
+                    ),
                   ),
                 ),
-              ),
-            ],
+                SizedBox(
+                  height: 30,
+                ),
+                ChatBubble(
+                  nipLength: 30.0,
+                  nipRadius: 10.0,
+                  nipTop: 80.0,
+                  shadows: <Shadow>[
+                    Shadow(
+                      color: Colors.red,
+                      offset: Offset(0, 0),
+                      blurRadius: 5,
+                    )
+                  ],
+                  direction: reverse
+                      ? ChatBubbleNipDirection.RIGHT
+                      : ChatBubbleNipDirection.LEFT,
+                  child: Container(
+                    width: 300,
+                    color: Colors.grey.withOpacity(0.8),
+                    child: Image.network(
+                      'https://pics7.baidu.com/feed/b21c8701a18b87d6627be358ca93ae3e1e30fdda.jpeg?token=a6434449ed9bc79aa3c414a52e4a4e1b',
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                ChatBubble(
+                  shadows: <Shadow>[
+                    Shadow(
+                      color: Colors.grey.withOpacity(0.8),
+                      offset: Offset(-1.0, -1.0),
+                      blurRadius: 0.1,
+                    ),
+                    Shadow(
+                      color: Colors.grey.withOpacity(0.8),
+                      offset: Offset(1.0, 1.0),
+                      blurRadius: 0.4,
+                    )
+                  ],
+                  direction: ChatBubbleNipDirection.LEFT,
+                  child: Container(
+                    width: 200,
+                    color: Colors.grey.withOpacity(0.8),
+                    child: Image.network(
+                      'https://pics7.baidu.com/feed/b21c8701a18b87d6627be358ca93ae3e1e30fdda.jpeg?token=a6434449ed9bc79aa3c414a52e4a4e1b',
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

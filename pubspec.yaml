@@ -1,6 +1,6 @@
 name: chat_bubble
 description: A chat bubble widget, similar to WeChat, You can customize the orientation and the size of the rounded corners, as well as the rounded corners and position of the triangle..
-version: 0.1.1+2
+version: 0.1.1+3
 homepage: 'https://github.com/mrTangYun/flutter_chat_bubble'
 
 environment:
