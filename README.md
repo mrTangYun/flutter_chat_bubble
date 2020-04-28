@@ -2,7 +2,14 @@
 
 A chat bubble widget, similar to WeChat, You can customize the orientation and the size of the rounded corners, as well as the rounded corners and position of the triangle..
 
-类似微信一样的聊天气泡，可以用作文字、图片等等
+类似微信一样的聊天气泡，可以用作文字、图片等等。 通常文字类的聊天气泡可以使用定位的纯色的小矩形旋转，但把它应用在图片上面就不对了。这个插件可以在图片左右侧切割出一个气泡小三角。
+
+## Depend on it
+Add this to your package's pubspec.yaml file:
+```
+dependencies:
+  chat_bubble: any
+```
 
 ## Usage
 ```
