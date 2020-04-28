@@ -17,6 +17,7 @@ import 'package:chat_bubble/chat_bubble.dart';
 
 
 ChatBubble(
+  // 阴影
   shadows: <Shadow>[
     Shadow(
       color: Colors.grey,
@@ -29,7 +30,14 @@ ChatBubble(
       blurRadius: 0.4,
     )
   ],
+  // 小三角的方向
   direction: reverse ? ChatBubbleNipDirection.RIGHT:  ChatBubbleNipDirection.LEFT,
+  // 小三角的边长
+  // nipLength: 30.0,
+  // 小三角的圆角
+  // nipRadius: 10.0,
+  // 小三角到顶部的距离
+  // nipTop: 80.0,
   child: Container(
     color: Colors.grey,
     child: img,
